@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="[%-level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
+        </Console>
+        <SMTP name="EMAIL"
+              subject="Error log"
+              to="kubyllka@ukr.net"
+              from="kubyllka@ukr.net"
+              smtpHost="smtp.ukr.net" smtpPort="2525"
+              smtpUsername="kubyllka@ukr.net"
+              smtpPassword="Psikr5dkIESv7a0O"
+              smtpProtocol="smtps"
+              bufferSize="100">
+        </SMTP>
+        <File name="FILE ERROR"
+              append="true"
+              fileName="error.log">
+            <PatternLayout
+                    pattern="[%-level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
+        </File>
+        <File name="FILE ALL LOGS"
+              append="true"
+              fileName="all_logs.log">
+            <PatternLayout
+                    pattern="[%-level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info" additivity="false">
+            <AppenderRef ref="FILE ALL LOGS"/>
+            <AppenderRef ref="CONSOLE" level="error"/>
+            <AppenderRef ref="FILE ERROR" level="error"/>
+            <AppenderRef ref="EMAIL" level="error"/>
+        </Root>
+    </Loggers>
+</Configuration>

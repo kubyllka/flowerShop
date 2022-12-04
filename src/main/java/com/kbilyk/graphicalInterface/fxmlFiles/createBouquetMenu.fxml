@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kbilyk.graphicalInterface.SceneCreateBouquet">
+  <tabs>
+    <Tab style="-fx-background-color: da3287;" text="Add flower">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: da3287;">
+               <children>
+                  <Accordion layoutX="397.0" layoutY="14.0" prefHeight="300.0" prefWidth="190.0">
+                     <panes>
+                        <TitledPane animated="false" prefHeight="85.0" prefWidth="191.0" text="All flowers">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e7e8e8;">
+                                 <children>
+                                    <Button fx:id="getAllFlowersButton" layoutX="34.0" layoutY="63.0" mnemonicParsing="false" onAction="#getAllFlowersAction" prefHeight="41.0" prefWidth="121.0" style="-fx-background-color: ffbcd9;" text="Get all flowers">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="Garamond" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="336.0" prefWidth="191.0" style="-fx-background-color: e7e8e8;" text="Filter in price range">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="189.0" style="-fx-background-color: e7e8e8;">
+                                 <children>
+                                    <TextField fx:id="maxFlowerPriceRange" layoutX="12.0" layoutY="99.0" onInputMethodTextChanged="#correctFlowerRangePriceFields" onKeyPressed="#correctFlowerRangePriceFields" onKeyReleased="#correctFlowerRangePriceFields" onKeyTyped="#correctFlowerRangePriceFields" prefHeight="25.0" prefWidth="165.0" />
+                                    <Button fx:id="filterFlowersInPriceRangeButton" disable="true" layoutX="33.0" layoutY="144.0" mnemonicParsing="false" onAction="#filterFlowersInPriceRangeAction" prefHeight="41.0" prefWidth="121.0" style="-fx-background-color: ffbcd9;" text="Get flowers">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="minFlowerPrice" layoutX="19.0" layoutY="5.0" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="maxFlowerPrice" layoutX="19.0" layoutY="22.0" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="errorFlowerPriceMax" alignment="TOP_RIGHT" layoutY="124.0" prefHeight="18.0" prefWidth="174.0" text="type value less than max like: 77,   56.6" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="minFlowerPriceRange" layoutX="12.0" layoutY="52.0" onInputMethodTextChanged="#correctFlowerRangePriceFields" onKeyPressed="#correctFlowerRangePriceFields" onKeyReleased="#correctFlowerRangePriceFields" onKeyTyped="#correctFlowerRangePriceFields" prefHeight="25.0" prefWidth="165.0" />
+                                    <Label fx:id="errorFlowerPriceMin" alignment="TOP_RIGHT" layoutY="77.0" prefHeight="18.0" prefWidth="174.0" text="type value bigger than min like: 77,   56.6" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="Garamond" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="336.0" prefWidth="191.0" style="-fx-background-color: e7e8e8;" text="Filter in length range">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="189.0" style="-fx-background-color: e7e8e8;">
+                                 <children>
+                                    <TextField fx:id="maxFlowerLengthRange" layoutX="12.0" layoutY="100.0" onInputMethodTextChanged="#correctFlowerRangeLengthFields" onKeyPressed="#correctFlowerRangeLengthFields" onKeyReleased="#correctFlowerRangeLengthFields" onKeyTyped="#correctFlowerRangeLengthFields" prefHeight="25.0" prefWidth="165.0" />
+                                    <Button fx:id="filterFlowerInLengthRangeButton" disable="true" layoutX="34.0" layoutY="143.0" mnemonicParsing="false" onAction="#filterFlowersInLengthRangeAction" prefHeight="41.0" prefWidth="121.0" style="-fx-background-color: ffbcd9;" text="Get flowers">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="minFlowerLength" layoutX="19.0" layoutY="6.0" prefHeight="14.0" prefWidth="154.0" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="maxFlowerLength" layoutX="19.0" layoutY="23.0" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="errorFlowerLengthMax" alignment="TOP_RIGHT" layoutY="125.0" prefHeight="18.0" prefWidth="174.0" text="type value less than max like: 77,   56.6" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="minFlowerLengthRange" layoutX="12.0" layoutY="53.0" onInputMethodTextChanged="#correctFlowerRangeLengthFields" onKeyPressed="#correctFlowerRangeLengthFields" onKeyReleased="#correctFlowerRangeLengthFields" onKeyTyped="#correctFlowerRangeLengthFields" prefHeight="25.0" prefWidth="165.0" />
+                                    <Label fx:id="errorFlowerLengthMin" alignment="TOP_RIGHT" layoutY="78.0" prefHeight="18.0" prefWidth="174.0" text="type value bigger than min like: 77,   56.6" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="Garamond" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: e7e8e8;" text="Filter flowers by type">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ChoiceBox fx:id="flowerType" layoutX="20.0" layoutY="67.0" prefWidth="150.0" />
+                                    <Button fx:id="filterFlowersByTypeButton" disable="true" layoutX="35.0" layoutY="126.0" mnemonicParsing="false" onAction="#filterFlowersByTypeAction" prefHeight="41.0" prefWidth="121.0" style="-fx-background-color: ffbcd9;" text="Get flowers">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Text fill="#ce3030" layoutX="34.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose type of flower" wrappingWidth="123.47003173828125">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="Garamond" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="53.0" prefWidth="191.0" style="-fx-background-color: e7e8e8;" text="Sort flowers by fresh">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: e7e8e8;">
+                                 <children>
+                                    <ChoiceBox fx:id="sortingTypeFlower" layoutX="20.0" layoutY="67.0" prefWidth="150.0" />
+                                    <Button fx:id="sortFlowersByFreshButton" disable="true" layoutX="35.0" layoutY="126.0" mnemonicParsing="false" onAction="#sortFlowersByFreshAction" prefHeight="41.0" prefWidth="121.0" style="-fx-background-color: ffbcd9;" text="Get flowers">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Text fill="#ce3030" layoutX="29.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose type of sorting" wrappingWidth="130.13671875">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="Garamond" size="12.0" />
+                           </font>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+                  <TableView fx:id="addTableOfFlowers" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="381.0" style="-fx-background-color: e7e8e8;">
+                     <columns>
+                        <TableColumn fx:id="flowerTypeColumn_addTable" prefWidth="99.0" text="Flower type" />
+                        <TableColumn fx:id="flowerColourColumn_addTable" minWidth="0.0" prefWidth="87.33331298828125" text="Colour" />
+                        <TableColumn fx:id="flowerPriceColumn_addTable" prefWidth="51.66668701171875" text="Price" />
+                        <TableColumn fx:id="flowerLengthColumn_addTable" prefWidth="48.0" text="Length" />
+                        <TableColumn fx:id="deliveryDateColumn_addTable" prefWidth="94.0" text="Delivery date" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="backOptionAddFlower" layoutX="439.0" layoutY="321.0" mnemonicParsing="false" onAction="#backOption" prefHeight="43.0" prefWidth="105.0" style="-fx-background-color: ffbcd9;" text="Back">
+                     <font>
+                        <Font name="Garamond" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addFlowerButton" disable="true" layoutX="99.0" layoutY="321.0" mnemonicParsing="false" onAction="#addSelectedFlower" prefHeight="43.0" prefWidth="211.0" style="-fx-background-color: ffbcd9;" text="Add flower to bouquet">
+                     <font>
+                        <Font name="Garamond" size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+         </content>
+    </Tab>
+    <Tab style="-fx-background-color: da3287;" text="Add accessory">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: da3287;">
+               <children>
+                  <Accordion layoutX="397.0" layoutY="14.0" prefHeight="300.0" prefWidth="191.0">
+                     <panes>
+                        <TitledPane animated="false" prefHeight="85.0" prefWidth="191.0" text="All accessories">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e7e8e8;">
+                                 <children>
+                                    <Button fx:id="getAllAccessoriesButton" layoutX="34.0" layoutY="63.0" mnemonicParsing="false" onAction="#getAllAccessoriesAction" prefHeight="41.0" prefWidth="121.0" style="-fx-background-color: ffbcd9;" text="Get all accessories">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="Garamond" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="100.0" prefWidth="200.0" text="Filter accessories by type">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: e7e8e8;">
+                                 <children>
+                                    <ChoiceBox fx:id="accessoryType" layoutX="20.0" layoutY="67.0" prefWidth="150.0" />
+                                    <Button fx:id="filterAccessoriesByTypeButton" disable="true" layoutX="35.0" layoutY="126.0" mnemonicParsing="false" onAction="#filterAccessoriesByTypeAction" prefHeight="41.0" prefWidth="121.0" style="-fx-background-color: ffbcd9;" text="Get accessories">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Text fill="#ce3030" layoutX="24.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose type of accessory" wrappingWidth="141.47003173828125">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="Garamond" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="270.0" prefWidth="191.0" text="Filter in price range">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="189.0" style="-fx-background-color: e7e8e8;">
+                                 <children>
+                                    <TextField fx:id="maxAccessoryPriceRange" editable="false" layoutX="12.0" layoutY="108.0" onInputMethodTextChanged="#correctAccessoryRangePriceFields" onKeyPressed="#correctAccessoryRangePriceFields" onKeyReleased="#correctAccessoryRangePriceFields" onKeyTyped="#correctAccessoryRangePriceFields" prefHeight="25.0" prefWidth="165.0" />
+                                    <Button fx:id="filterAccessoriesInPriceRangeButton" disable="true" layoutX="33.0" layoutY="153.0" mnemonicParsing="false" onAction="#filterAccessoriesInPriceRangeAction" prefHeight="41.0" prefWidth="121.0" style="-fx-background-color: ffbcd9;" text="Get accessories">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="minAccessoryPrice" layoutX="19.0" layoutY="14.0" prefHeight="14.0" prefWidth="155.0" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="maxAccessoryPrice" layoutX="19.0" layoutY="31.0" prefHeight="14.0" prefWidth="155.0" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="errorAccessoryPriceMax" alignment="TOP_RIGHT" layoutY="133.0" prefHeight="18.0" prefWidth="174.0" text="type value less than max like: 77,   56.6" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="minAccessoryPriceRange" layoutX="12.0" layoutY="61.0" onInputMethodTextChanged="#correctAccessoryRangePriceFields" onKeyPressed="#correctAccessoryRangePriceFields" onKeyReleased="#correctAccessoryRangePriceFields" onKeyTyped="#correctAccessoryRangePriceFields" prefHeight="25.0" prefWidth="165.0" />
+                                    <Label fx:id="errorAccessoryPriceMin" alignment="TOP_RIGHT" layoutY="86.0" prefHeight="18.0" prefWidth="174.0" text="type value bigger than min like: 77,   56.6" textFill="#ce3030">
+                                       <font>
+                                          <Font name="Garamond" size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="Garamond" size="12.0" />
+                           </font>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+                  <TableView fx:id="addTableOfAccessories" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="382.0" style="-fx-background-color: e7e8e8;">
+                     <columns>
+                        <TableColumn fx:id="accessoryTypeColumn_addTable" prefWidth="111.0" text="Accessory Type" />
+                        <TableColumn fx:id="accessoryColourColumn_addTable" prefWidth="91.0" text="Colour" />
+                        <TableColumn fx:id="accessoryPriceColumn_addTable" prefWidth="49.0" text="Price" />
+                        <TableColumn fx:id="additionalInfoColumn_addTable" prefWidth="131.0" text="Additional info" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="backOptionAddAccessory" layoutX="446.0" layoutY="321.0" mnemonicParsing="false" onAction="#backOption" prefHeight="43.0" prefWidth="105.0" style="-fx-background-color: ffbcd9;" text="Back">
+                     <font>
+                        <Font name="Garamond" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addAccessoryButton" disable="true" layoutX="100.0" layoutY="321.0" mnemonicParsing="false" onAction="#addSelectedAccessory" prefHeight="43.0" prefWidth="211.0" style="-fx-background-color: ffbcd9;" text="Add accessory to bouquet">
+                     <font>
+                        <Font name="Garamond" size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab style="-fx-background-color: ffecff;" text="Delete flower from bouquet">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ffecff;">
+               <children>
+                  <TableView fx:id="deleteTableOfFlowers" layoutX="28.0" layoutY="48.0" prefHeight="239.0" prefWidth="544.0" style="-fx-background-color: e7e8e8;">
+                     <columns>
+                        <TableColumn fx:id="flowerTypeColumn_deleteTable" prefWidth="129.0" text="Flower type" />
+                        <TableColumn fx:id="flowerColourColumn_deleteTable" minWidth="0.0" prefWidth="105.0" text="Colour" />
+                        <TableColumn fx:id="flowerPriceColumn_deleteTable" minWidth="2.0" prefWidth="83.33331298828125" text="Price" />
+                        <TableColumn fx:id="flowerLengthColumn_deleteTable" prefWidth="71.66668701171875" text="Length" />
+                        <TableColumn fx:id="deliveryDateColumn_deleteTable" prefWidth="154.66668701171875" text="Delivery date" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="backOptionDeleteFlower" layoutX="467.0" layoutY="308.0" mnemonicParsing="false" onAction="#backOption" prefHeight="43.0" prefWidth="105.0" style="-fx-background-color: ffcff1;" text="Back">
+                     <font>
+                        <Font name="Garamond" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteFlowerButton" disable="true" layoutX="195.0" layoutY="308.0" mnemonicParsing="false" onAction="#deleteSelectedFlowerBouquet" prefHeight="43.0" prefWidth="211.0" style="-fx-background-color: ffcff1;" text="Delete flower from bouquet">
+                     <font>
+                        <Font name="Garamond" size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab style="-fx-background-color: ffecff;" text="Delete accessory from bouquet">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ffecff;">
+               <children>
+                  <TableView fx:id="deleteTableOfAccessories" layoutX="30.0" layoutY="47.0" prefHeight="240.0" prefWidth="545.0" style="-fx-background-color: e7e8e8;">
+                     <columns>
+                        <TableColumn fx:id="accessoryTypeColumn_deleteTable" prefWidth="146.33331298828125" text="Accessory Type" />
+                        <TableColumn fx:id="accessoryColourColumn_deleteTable" prefWidth="89.66668701171875" text="Colour" />
+                        <TableColumn fx:id="accessoryPriceColumn_deleteTable" prefWidth="85.0" text="Price" />
+                        <TableColumn fx:id="additionalInfoColumn_deleteTable" prefWidth="222.0" text="Additional info" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="backOptionDeleteAccessory" layoutX="470.0" layoutY="304.0" mnemonicParsing="false" onAction="#backOption" prefHeight="43.0" prefWidth="105.0" style="-fx-background-color: ffcff1;" text="Back">
+                     <font>
+                        <Font name="Garamond" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteAccessoryButton" disable="true" layoutX="197.0" layoutY="304.0" mnemonicParsing="false" onAction="#deleteSelectedAccessoryBouquet" prefHeight="43.0" prefWidth="211.0" style="-fx-background-color: ffcff1;" text="Delete accessory from bouquet">
+                     <font>
+                        <Font name="Garamond" size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab style="-fx-background-color: ffdae9;" text="Info bouquet">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ffdae9;">
+               <children>
+                  <TableView fx:id="infoTableOfFlowers" prefHeight="193.0" prefWidth="398.0" style="-fx-background-color: eee2eb;">
+                     <columns>
+                        <TableColumn fx:id="flowerTypeColumn_infoTable" prefWidth="93.66665649414062" text="Flower type" />
+                        <TableColumn fx:id="flowerColourColumn_infoTable" minWidth="0.0" prefWidth="78.3333740234375" text="Colour" />
+                        <TableColumn fx:id="flowerPriceColumn_infoTable" minWidth="2.0" prefWidth="54.33331298828125" text="Price" />
+                        <TableColumn fx:id="flowerLengthColumn_infoTable" prefWidth="49.0" text="Length" />
+                        <TableColumn fx:id="deliveryDateColumn_infoTable" prefWidth="119.66668701171875" text="Delivery date" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="infoTableOfAccessories" layoutY="194.0" prefHeight="179.0" prefWidth="399.0" style="-fx-background-color: eee2eb;">
+                     <columns>
+                        <TableColumn fx:id="accessoryTypeColumn_infoTable" prefWidth="93.66665649414062" text="Accessory Type" />
+                        <TableColumn fx:id="accessoryColourColumn_infoTable" prefWidth="90.66668701171875" text="Colour" />
+                        <TableColumn fx:id="accessoryPriceColumn_infoTable" prefWidth="62.66668701171875" text="Price" />
+                        <TableColumn fx:id="additionalInfoColumn_infoTable" prefWidth="150.0" text="Additional info" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="buyBouquetButton" disable="true" layoutX="418.0" layoutY="283.0" mnemonicParsing="false" onAction="#buyBouquetAction" prefHeight="62.0" prefWidth="168.0" style="-fx-background-color: ffbcd9;" text="Buy this bouquet">
+                     <font>
+                        <Font name="Garamond" size="14.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#a62525" layoutX="430.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info about bouquet" wrappingWidth="143.33331298828125">
+                     <font>
+                        <Font name="Garamond" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="priceOfBouquet" layoutX="418.0" layoutY="220.0" prefHeight="17.0" prefWidth="164.0" text="Price: " textFill="#ce3030">
+                     <font>
+                        <Font name="Garamond" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="avgLengthOfFlower" layoutX="418.0" layoutY="182.0" prefHeight="17.0" prefWidth="164.0" text="Average length of flower:" textFill="#ae2424">
+                     <font>
+                        <Font name="Garamond" size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

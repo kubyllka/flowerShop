@@ -1,0 +1,43 @@
+[ERROR] 2022-11-09 15:37:39.184 [main] Database - Error trace in getConnection() : Login failed for user 'hzzi'.
+[ERROR] 2022-11-30 14:47:32.432 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In ascending order in database: 
+Incorrect syntax near the keyword 'In'.
+[ERROR] 2022-11-30 14:47:42.791 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In ascending order in database: 
+Incorrect syntax near the keyword 'In'.
+[ERROR] 2022-11-30 14:47:45.736 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In descending order in database: 
+Incorrect syntax near the keyword 'In'.
+[ERROR] 2022-11-30 14:47:46.542 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In descending order in database: 
+Incorrect syntax near the keyword 'In'.
+[ERROR] 2022-11-30 14:47:46.728 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In descending order in database: 
+Incorrect syntax near the keyword 'In'.
+[ERROR] 2022-11-30 14:47:46.912 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In descending order in database: 
+Incorrect syntax near the keyword 'In'.
+[ERROR] 2022-11-30 14:47:47.130 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In descending order in database: 
+Incorrect syntax near the keyword 'In'.
+[ERROR] 2022-11-30 15:02:24.030 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In ascending order in database: 
+Incorrect syntax near 'class'.
+[ERROR] 2022-11-30 15:05:35.614 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In ascending order in database: 
+Incorrect syntax near 'class'.
+[ERROR] 2022-11-30 15:07:19.949 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In descending order in database: 
+Incorrect syntax near 'class'.
+[ERROR] 2022-11-30 15:12:47.183 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In ascending order in database: 
+Incorrect syntax near 'Optional'.
+[ERROR] 2022-11-30 15:15:05.159 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In ascending order in database: 
+Incorrect syntax near the keyword 'public'.
+[ERROR] 2022-11-30 15:20:18.283 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In ascending order in database: 
+Incorrect syntax near the keyword 'In'.
+[ERROR] 2022-11-30 15:20:19.127 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In ascending order in database: 
+Incorrect syntax near the keyword 'In'.
+[ERROR] 2022-11-30 15:25:06.042 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In descending order in database: 
+Incorrect syntax near the keyword 'In'.
+[ERROR] 2022-11-30 15:31:56.018 [JavaFX Application Thread] SortFilterFlowersDAO - Сan`t do SELECT flowerID, flowerTypeID, flowerColour, flowerLength, flowerPrice, fDateDelivery FROM flowers ORDER BY fDateDelivery In descending order in database: 
+Incorrect syntax near 'Optional'.
+[ERROR] 2022-11-30 15:48:05.778 [JavaFX Application Thread] Database - Error trace in getConnection() : Login failed for user 'hzzii'.
+[ERROR] 2022-11-30 15:49:27.590 [JavaFX Application Thread] Database - Error trace in getConnection() : Login failed for user 'hzzii'.
+[ERROR] 2022-11-30 15:57:12.867 [JavaFX Application Thread] Database - Error trace in getConnection() : Login failed for user 'hzzш'.
+[ERROR] 2022-11-30 15:57:14.346 [JavaFX Application Thread] Database - Error trace in getConnection() : Login failed for user 'hzzш'.
+[ERROR] 2022-11-30 16:02:00.614 [JavaFX Application Thread] Database - Error trace in getConnection() : Login failed for user 'hzzш'.
+[ERROR] 2022-12-03 00:15:25.733 [JavaFX Application Thread] FlowerDAO - An error occurred during insertion new flowerFlower{id=0, flowerType=Tulip, colour='fefefkeeofkefeofefkfooefkefokeofkefoekofkefokeokeofeofkeofkeofkeofkefoekfeofkeofekfkekoefkefkeofekfoefkfoeefkfekfeofkeokfeofkeofkef', length=54.0, price=4.0, date=null}
+.
+ String or binary data would be truncated in table 'flowershopDB.dbo.flowers', column 'flowerColour'. Truncated value: 'fefefkeeofkefeofefkfooefkefokeofkefoekofkefokeokeofeofkeofkeofkeofkefo'.
+[ERROR] 2022-12-03 23:43:25.067 [JavaFX Application Thread] Database - Error trace in getConnection() : Login failed for user 'hzzi'.
+[ERROR] 2022-12-04 00:15:26.517 [JavaFX Application Thread] Database - Error trace in getConnection() : Login failed for user 'hzzi'.

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: fbcce7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kbilyk.graphicalInterface.SceneAddNewFlower">
+   <children>
+      <VBox layoutX="81.0" layoutY="63.0" prefHeight="218.0" prefWidth="184.0" spacing="30.0">
+         <children>
+            <Text fill="#000000bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Flower type" wrappingWidth="143.903076171875">
+               <font>
+                  <Font name="Garamond" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#000000bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Colour" wrappingWidth="153.903076171875">
+               <font>
+                  <Font name="Garamond" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#000000bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Length" wrappingWidth="143.903076171875">
+               <font>
+                  <Font name="Garamond" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#000000bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" wrappingWidth="143.903076171875">
+               <font>
+                  <Font name="Garamond" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#000000bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of flowers" wrappingWidth="143.903076171875">
+               <font>
+                  <Font name="Garamond" size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <HBox layoutX="173.0" layoutY="342.0" prefHeight="43.0" prefWidth="285.0" spacing="20.0">
+         <children>
+            <Button fx:id="addNewFlower" disable="true" mnemonicParsing="false" onAction="#addNewFlower" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: ffbcd9;" text="Add flower">
+               <font>
+                  <Font name="Garamond" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#backOption" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: ffbcd9;" text="Back">
+               <font>
+                  <Font name="Garamond" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <TextField fx:id="lengthField" layoutX="265.0" layoutY="165.0" onInputMethodTextChanged="#correctFields" onKeyPressed="#correctFields" onKeyReleased="#correctFields" onKeyTyped="#correctFields" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: e7e8e8;">
+         <font>
+            <Font name="Garamond" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="colourField" layoutX="265.0" layoutY="117.0" onInputMethodTextChanged="#correctFields" onKeyPressed="#correctFields" onKeyReleased="#correctFields" onKeyTyped="#correctFields" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: e7e8e8;">
+         <font>
+            <Font name="Garamond" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="priceField" layoutX="265.0" layoutY="221.0" onInputMethodTextChanged="#correctFields" onKeyPressed="#correctFields" onKeyReleased="#correctFields" onKeyTyped="#correctFields" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: e7e8e8;">
+         <font>
+            <Font name="Garamond" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="numberOfFlowersField" layoutX="265.0" layoutY="267.0" onInputMethodTextChanged="#correctFields" onKeyPressed="#correctFields" onKeyReleased="#correctFields" onKeyTyped="#correctFields" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: e7e8e8;">
+         <font>
+            <Font name="Garamond" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="errorLength" alignment="TOP_RIGHT" layoutX="268.0" layoutY="191.0" prefHeight="18.0" prefWidth="253.0" text="type double or integer value like: 77,   56.6" textFill="#cc3131">
+         <font>
+            <Font name="Garamond" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorPrice" alignment="TOP_RIGHT" layoutX="265.0" layoutY="246.0" prefHeight="18.0" prefWidth="253.0" text="type real or integer value like: 77,   56.6" textFill="#ce3030">
+         <font>
+            <Font name="Garamond" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorNumberOfFlowers" alignment="TOP_RIGHT" layoutX="268.0" layoutY="293.0" prefHeight="18.0" prefWidth="253.0" text="type integer value like: 1,  68" textFill="#ce3030">
+         <font>
+            <Font name="Garamond" size="12.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="flowerType" layoutX="268.0" layoutY="63.0" onDragEntered="#addNewFlower" prefHeight="27.0" prefWidth="253.0" style="-fx-background-color: e7e8e8;" />
+      <Label fx:id="errorColour" alignment="TOP_RIGHT" layoutX="265.0" layoutY="144.0" prefHeight="18.0" prefWidth="253.0" text="type the colour like: light pink, red" textAlignment="CENTER" textFill="#ce3030">
+         <font>
+            <Font name="Garamond" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

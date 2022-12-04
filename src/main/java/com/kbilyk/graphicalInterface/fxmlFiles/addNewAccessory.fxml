@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: fbcce7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kbilyk.graphicalInterface.SceneAddNewAccessory">
+   <children>
+      <VBox layoutX="81.0" layoutY="47.0" prefHeight="279.0" prefWidth="185.0" spacing="30.0">
+         <children>
+            <Text fill="#000000bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Accessory type" wrappingWidth="143.903076171875">
+               <font>
+                  <Font name="Garamond" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#000000bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Colour" wrappingWidth="153.903076171875">
+               <font>
+                  <Font name="Garamond" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#000000bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" wrappingWidth="143.903076171875">
+               <font>
+                  <Font name="Garamond" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#000000bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of accessories" wrappingWidth="169.903076171875">
+               <font>
+                  <Font name="Garamond" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#000000bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional info about accessory" wrappingWidth="143.903076171875">
+               <font>
+                  <Font name="Garamond" size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <ChoiceBox fx:id="accessoryType" layoutX="266.0" layoutY="47.0" prefHeight="27.0" prefWidth="253.0" style="-fx-background-color: e7e8e8;" />
+      <TextField fx:id="colourField" layoutX="266.0" layoutY="92.0" onInputMethodTextChanged="#correctFields" onKeyPressed="#correctFields" onKeyReleased="#correctFields" onKeyTyped="#correctFields" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: e7e8e8;">
+         <font>
+            <Font name="Garamond" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="errorColour" alignment="TOP_RIGHT" layoutX="266.0" layoutY="119.0" prefHeight="18.0" prefWidth="253.0" text="type the colour like: light pink, red" textAlignment="CENTER" textFill="#ce3030">
+         <font>
+            <Font name="Garamond" size="12.0" />
+         </font>
+      </Label>
+      <HBox layoutX="158.0" layoutY="340.0" prefHeight="34.0" prefWidth="285.0" spacing="20.0">
+         <children>
+            <Button fx:id="addNewAccessory" disable="true" mnemonicParsing="false" onAction="#addNewAccessory" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: ffbcd9;" text="Add accessory">
+               <font>
+                  <Font name="Garamond" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#backOption" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: ffbcd9;" text="Back">
+               <font>
+                  <Font name="Garamond" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <TextField fx:id="priceField" layoutX="266.0" layoutY="144.0" onInputMethodTextChanged="#correctFields" onKeyPressed="#correctFields" onKeyReleased="#correctFields" onKeyTyped="#correctFields" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: e7e8e8;">
+         <font>
+            <Font name="Garamond" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="errorPrice" alignment="TOP_RIGHT" layoutX="266.0" layoutY="171.0" prefHeight="18.0" prefWidth="253.0" text="type real or integer value like: 77,   56.6" textFill="#ce3030">
+         <font>
+            <Font name="Garamond" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numberOfAccessoriesField" layoutX="266.0" layoutY="200.0" onInputMethodTextChanged="#correctFields" onKeyPressed="#correctFields" onKeyReleased="#correctFields" onKeyTyped="#correctFields" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: e7e8e8;">
+         <font>
+            <Font name="Garamond" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="errorNumberOfAccessories" alignment="TOP_RIGHT" layoutX="266.0" layoutY="227.0" prefHeight="18.0" prefWidth="253.0" text="type integer value like: 1,  68" textFill="#ce3030">
+         <font>
+            <Font name="Garamond" size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="infoField" layoutX="266.0" layoutY="245.0" onInputMethodTextChanged="#correctFields" onKeyPressed="#correctFields" onKeyReleased="#correctFields" onKeyTyped="#correctFields" prefHeight="66.0" prefWidth="253.0" style="-fx-background-color: e7e8e8;">
+         <font>
+            <Font name="Garamond" size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="errorAdditionalInfo" alignment="TOP_RIGHT" layoutX="266.0" layoutY="311.0" prefHeight="18.0" prefWidth="253.0" text="max symbol:" textFill="#ce3030" visible="false">
+         <font>
+            <Font name="Garamond" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
